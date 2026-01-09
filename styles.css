@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* ===============================
+   NAVBAR
+   =============================== */
+
+
+.navbar {
+    height: 80px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(196, 161, 161);
+    color: white; 
+    font-size: 1.3rem;
+    position: sticky;
+    top: 0;
+    z-index: 999; 
+
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px; 
+}
+
+#navbar__logo {
+    display: flex;
+    background-color: rgb(196, 161, 161);
+    color: white; 
+    background-size: 100%;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+    cursor:  pointer;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center; 
+}
+
+.navbar__item {
+    display: flex;
+    height: 80px;
+
+} 
+
+.navbar__links {
+    display: flex;
+    align-items: center; 
+    color: white;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__links:hover{
+    color: black;
+    transition: all 0.3s ease;
+
+}
+
+#navbar__logo:hover {
+    color: black;
+    transition: all 0.3s ease;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width: 700px) {
+    .navbar__container {
+        display: flex;
+        justify-content:space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0; 
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar__menu.active {
+        background: rgb(196, 161, 161);
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+
+    }
+
+    .navbar-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    .navbar__item {
+        width: 100%
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar-toggle .bar {
+        display: block;
+        cursor: pointer;
+
+    }
+    
+    /* changes 3 lines into a cross */
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* ===============================
+   MAIN HERO SECTION
+   =============================== */
+
+.main {
+    background-color: white;
+}
+.main__content {
+    color: black;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center; 
+    justify-self: center; 
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+.main__content h1 {
+    font-size: 2.5rem;
+    background-color: rgb(196, 161, 161);
+    background-image: linear-gradient(to top, rgb(119, 81, 81) 0%, rgb(196, 161, 161) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main__content h2 {
+    font-size: 1.8rem;
+    background-color: rgb(196, 161, 161);
+    background-image: linear-gradient(to top, rgb(64, 43, 43) 0%, rgb(119, 81, 81) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    /* There is a line because VS is warning that these aren't standard CSS properties*/
+    -webkit-text-fill-color: transparent;
+}
+
+.main__content ul {
+    margin: 0 0 1rem 1.2rem;
+    padding-left: 0;
+    list-style-position: outside;
+}
+
+.main__content li {
+    margin-bottom: 0.5rem; /* spacing between bullets */
+    line-height: 1.5;      /* makes them easier to read */
+}
+
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700; 
+}
+
+.main__img--container {
+    text-align: right;
+}
+
+#main__img {
+    max-width: 55%;   /* don’t let it go wider than its container */
+    height: auto;      /* keeps aspect ratio */
+    display: block;    /* helps with centering */
+    margin: 0 auto;    /* centers when needed */
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:600px) {
+    .main__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        height: auto; 
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .main__img--container {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    #main__img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ===============================
+   SUB SECTION
+   =============================== */
+
+
+.sub {
+    margin: 1rem 0;
+    width: 100%;
+    
+}
+
+.sub__content h1 {
+    font-size: 2rem;
+    background-color: rgb(196, 161, 161);
+    background-image: linear-gradient(to top, rgb(119, 81, 81) 0%, rgb(196, 161, 161) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub__content h2 {
+    font-size: 1.5rem;
+    background-color: rgb(196, 161, 161);
+    background-image: linear-gradient(to top, rgb(64, 43, 43) 0%, rgb(119, 81, 81) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    /* There is a line because VS is warning that these aren't standard CSS properties*/
+    -webkit-text-fill-color: transparent;
+}
+
+.sub__content ul {
+    margin: 0 0 1rem 1.2rem;
+    padding-left: 0;
+    list-style-position: outside;
+}
+
+.sub__content li {
+    margin-bottom: 0.5rem; /* spacing between bullets */
+    line-height: 1.5;      /* makes them easier to read */
+}
+
+.sub__content p {
+    margin: 1rem 0 0.5rem 0; /* adds space above headings like "Toot Hill" */
+}
+
+.sub__container {
+    margin: 0 1.5rem;
+}
