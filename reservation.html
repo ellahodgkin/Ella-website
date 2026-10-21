@@ -38,34 +38,67 @@
 
     <h1 class="project__header"> Table Reservation System: </h1>
     <div class="line__description"> 
-            A table reservation system built using HTML, CSS and JavaScript. 
+            A full-stack table reservation system built with Node.js, Express, PostgreSQL, JavaScript, HTML and CSS. 
     </div>
     <div class="project__hero__container">
         <div class="left__container">
 
             <div class="project__image__container">
-                <img src="reservation_pic.png" alt="Pic substitute" class="project__image">
+                <img src="admin_booking_page.png" alt="Screenshot of the table reservation system" class="project__image">
             </div>
         </div>
         <div class="right__container">
-            <strong>Technologies used:</strong> <br>HTML, CSS and JS <br>
+            <strong>Technologies used:</strong> <br>Node.js, Express, PostgreSQL, JavaScript, HTML and CSS. <br>
             <strong>Type of project: </strong><br>Solo, relevant to bar manager job.<br>
-            <strong>Status:</strong> <br>The project is still in progress, but the aim is to create a system where users can select a date and time, and the system will check if there are any available tables at that time. If there are, the user can then make a reservation. The system will also have an admin page where the restaurant can view and manage all reservations. <br>
+            <strong>Status:</strong><br>Core features built: full create, read, update and delete (CRUD) for bookings, overlap checking, timezone handling and an admin view.<br>
         </div>
     </div>
 
     <!--  SUB BODY-->
 
-    <!-- <div class="project__sub__container">
+    <div class="project__sub__container">
         <div class="project__description">
-            what the project does <br>
-            what I built <br>
-            what went wrong, what I tried, what I learnt <br>
+            <h2>What the project does</h2>
+            <p>
+                Customers choose a date and time, and the system checks whether a table is free for that slot. If one is, they can make a booking.
+                An admin view lets the venue see and manage all reservations.
+            </p>
+            <p>
+                I started this because of my job as a bar manager. Bookings are the kind of problem I deal with at work, so I wanted to build something I could test against real needs.
+            </p>
+
+            <h2>What I built</h2>
+            <ul>
+                <li>A back end in <strong>Node.js and Express</strong> that handles requests for creating, viewing, editing and cancelling bookings.</li>
+                <li>A <strong>PostgreSQL</strong> database that stores tables and reservations.</li>
+                <li><strong>Booking overlap logic</strong>, so the same table can't be booked twice for overlapping times.</li>
+                <li><strong>Timezone handling</strong>, so booking times stay correct wherever they are stored or displayed.</li>
+                <li>An <strong>admin view</strong> where the venue can see and manage every reservation.</li>
+            </ul>
+
+            <h2>What went wrong, what I tried, what I learnt</h2>
+            <p>
+                <!--
+                     - how you worked out the overlap check (what went wrong at first, how you fixed it)
+                     - the timezone problem: what broke and what you changed
+                     - what you'd do differently next time
+                     - what this taught you about back end and database design -->
+            </p>
         </div>
         <div class="project__links">
-            links
+            <h2>Links</h2>
+            <ul>
+                <!-- <li><a href="#" target="_blank" rel="noopener">Code on GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener">Live demo</a></li> -->
+            </ul>
+            <h2>Screenshots</h2>
+            <img src="admin_booking_page.png" alt="Screenshot of the admin booking page" class="project__screenshot">
+            <img src="booking_made.png" alt="Screenshot of the customer booking page" class="project__screenshot">
+            <img src="bookings_list.png" alt="Screenshot of the admin bookings list" class="project__screenshot">
+            <img src="calendar_view.png" alt="Screenshot of the admin calendar view" class="project__screenshot">
         </div>
-    </div> -->
+    </div>
+
 
     <footer class="footer">
     <div class="footer__container">
@@ -77,9 +110,6 @@
         </div>
     </div>
     </footer>
-
-
-
 
     <script src='script.js'></script>
 </body>

@@ -486,10 +486,93 @@
    SUB SECTION PROJECT
    =============================== */
 
-.project__sub__container {
+/* .project__sub__container {
     margin: 0 0 1rem 1.2rem;
     padding-left: 0;
     list-style-position: outside;    
+} */
+
+/* Project detail sections */
+.project__sub__container { 
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px; 
+    width: 100%; 
+    max-width: 1300px; 
+    margin: 0 auto 3rem auto; 
+    padding: 0 20px; 
+}
+
+.project__description h2, .project__links h2, .project__screenshot h2 { 
+    font-size: 1.5rem; 
+    color: rgb(119, 81, 81); 
+    margin: 1.5rem 0 0.5rem 0; 
+}
+
+.project__description h2:first-child, .project__links h2:first-child { 
+    margin-top: 0; 
+}
+
+.project__description p { 
+    line-height: 1.6; 
+    margin-bottom: 0.8rem; 
+}
+
+.project__description ul { 
+    margin: 0 0 1rem 1.2rem; 
+}
+
+.project__description li { 
+    margin-bottom: 0.5rem; 
+    line-height: 1.5; 
+}
+
+.project__links { 
+    border: 3px ridge; 
+    border-radius: 6px; 
+    background-color: rgb(223, 199, 199, 0.6); 
+    padding: 1rem 1.2rem; 
+    align-self: start; 
+}
+
+.project__links ul { 
+    list-style: none; 
+}
+
+.project__links li { 
+    margin-bottom: 0.6rem; 
+}
+
+.project__links a, .skills a { 
+    color: rgb(119, 81, 81); 
+    font-weight: 700; 
+}
+
+.project__links a:hover, .skills a:hover { 
+    color: black; 
+}
+
+.project__screenshot { 
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 1rem; 
+    border: 2px solid rgb(119, 81, 81); 
+    border-radius: 4px; 
+}
+
+/* Touch screens have no hover, so always show project titles */
+@media (hover: none) { .project__title { opacity: 1; } }
+
+@media screen and (max-width: 700px) {
+    .project__sub__container { 
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+    .footer__container { 
+        padding: 0 25px; 
+        justify-content: center; 
+        text-align: center; 
+    }
 }
 
 
