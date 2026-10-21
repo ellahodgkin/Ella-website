@@ -537,3 +537,44 @@
         font-size: 1.5rem;
     } */
 }
+
+/* FOOTER */
+
+/* Footer stays at the bottom of short pages */
+body { 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.footer { 
+    margin-top: auto; 
+    background-color: rgb(196, 161, 161); 
+    color: white; 
+    padding: 1.2rem 0; 
+}
+
+.footer__container { display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 0.8rem; 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding: 0 50px; 
+}
+
+.footer__links { 
+    display: flex; 
+    gap: 1.5rem; 
+}
+
+.footer__links a { 
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer__links a:hover { 
+    color: black; 
+    transition: all 0.3s ease; 
+}
