@@ -486,16 +486,10 @@
    SUB SECTION PROJECT
    =============================== */
 
-/* .project__sub__container {
-    margin: 0 0 1rem 1.2rem;
-    padding-left: 0;
-    list-style-position: outside;    
-} */
-
 /* Project detail sections */
 .project__sub__container { 
     display: grid; 
-    grid-template-columns: 2fr 1fr; 
+    grid-template-columns: 1fr 1fr; 
     gap: 40px; 
     width: 100%; 
     max-width: 1300px; 
@@ -560,10 +554,22 @@
     border-radius: 4px; 
 }
 
+.screenshot__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media screen and (max-width: 900px) {
+    .screenshot__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Touch screens have no hover, so always show project titles */
 @media (hover: none) { .project__title { opacity: 1; } }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
     .project__sub__container { 
         grid-template-columns: 1fr; 
         gap: 20px; 
